@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class SuggestionController {
-int x=5;
+
     SuggestionRepository suggestionRepository;
     SuggesionMapper suggesionMapper;
 
