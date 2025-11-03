@@ -1,0 +1,192 @@
+2025-10-26 13:42:22.569746+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-28 17:55:03.345907+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-28 18:03:55.689892+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-28 20:56:09.312304+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-28 20:59:31.187327+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-28 21:16:18.961774+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-28 21:17:33.218208+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Cannot parse "DATE" constant "1"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22007-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueDate.parse(ValueDate.java:53)
+	at org.h2.value.Value.convertToDate(Value.java:1880)
+	at org.h2.value.Value.convertTo(Value.java:1173)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at org.h2.result.UpdatableRow.insertRow(UpdatableRow.java:334)
+	at org.h2.jdbc.JdbcResultSet.insertRow(JdbcResultSet.java:3335)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1164)
+	at org.h2.server.web.WebApp.process(WebApp.java:250)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: java.lang.IllegalArgumentException: 1
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:187)
+	at org.h2.value.ValueDate.parse(ValueDate.java:51)
+	... 55 more
+2025-10-28 21:17:33.223139+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Cannot parse "DATE" constant "1"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22007-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueDate.parse(ValueDate.java:53)
+	at org.h2.value.Value.convertToDate(Value.java:1880)
+	at org.h2.value.Value.convertTo(Value.java:1173)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at org.h2.result.UpdatableRow.insertRow(UpdatableRow.java:334)
+	at org.h2.jdbc.JdbcResultSet.insertRow(JdbcResultSet.java:3335)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1164)
+	at org.h2.server.web.WebApp.process(WebApp.java:250)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: java.lang.IllegalArgumentException: 1
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:187)
+	at org.h2.value.ValueDate.parse(ValueDate.java:51)
+	... 55 more
+2025-10-28 21:17:35.990916+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (SUGGESTION: ""EXERCISE"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-232]
+2025-10-28 21:17:35.992027+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (SUGGESTION: ""EXERCISE"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-232]
+2025-10-29 00:19:26.574969+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-29 00:20:55.247872+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'nulll' (SUGGESTION: ""BOOK_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-232]
+2025-10-29 00:20:55.247872+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'nulll' (SUGGESTION: ""BOOK_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-232]
+2025-10-29 00:33:17.627551+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-29 00:34:40.927377+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'nulll' (SUGGESTION: ""BOOK_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-232]
+2025-10-29 00:34:40.927377+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'nulll' (SUGGESTION: ""BOOK_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."SUGGESTION"("EXERCISE","PAGE","SECTION","SUB_SECTION","UPLOAD_DATE","BOOK_ID","ID","USER_ID","CONTENT","IMAGE_PATH")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-232]
+2025-10-29 00:35:09.080733+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-29 00:47:57.952301+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-30 23:25:40.136892+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-02 20:53:54.741260+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-02 21:43:37.161991+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-02 22:25:03.251638+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
