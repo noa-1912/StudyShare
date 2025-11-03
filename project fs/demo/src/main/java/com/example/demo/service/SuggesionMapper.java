@@ -17,6 +17,7 @@ public interface SuggesionMapper {
     default SuggestionDTO suggestionDto(Suggestion s) throws IOException {
         SuggestionDTO suggestionDTO=new SuggestionDTO();
 
+        suggestionDTO.setUser(s.getUser());
         suggestionDTO.setId(s.getId());
         suggestionDTO.setContent(s.getContent());
         suggestionDTO.setPage(s.getPage());
@@ -24,7 +25,7 @@ public interface SuggesionMapper {
         suggestionDTO.setSection(s.getSection());
         suggestionDTO.setSubSection(s.getSubSection());
         suggestionDTO.setUploadDate(s.getUploadDate());
-       // suggestionDTO.setImagePath(s.getImagePath());
+        suggestionDTO.setImagePath(s.getImagePath());
 
         //החזרת התמונה
         suggestionDTO.setImage(ImageUtils.getImage(s.getImagePath()));

@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,7 +18,7 @@ public class Suggestion {
     private String content;
     private LocalDate uploadDate;
     private String imagePath;
-
+    @JsonIgnoreProperties("suggestion")
     @ManyToOne
     private Users user;
     @ManyToOne

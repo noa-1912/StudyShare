@@ -61,7 +61,7 @@ public class SuggestionController {
 
 
     //העלאת פתרון חדש עם בחירת תמונה מהמחשב
-    @PostMapping("/uploadSaggestion")
+    @PostMapping("/uploadSuggestion")
     public ResponseEntity<Suggestion> uploadSaggestionWithImage(
             @RequestPart("image") MultipartFile file,
             @RequestPart("suggestion") Suggestion s) {

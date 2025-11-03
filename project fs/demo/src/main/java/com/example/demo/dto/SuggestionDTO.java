@@ -1,6 +1,8 @@
 package com.example.demo.dto;
 
 
+import com.example.demo.model.Users;
+
 import java.time.LocalDate;
 
 public class SuggestionDTO {
@@ -15,9 +17,7 @@ public class SuggestionDTO {
     private String imagePath;
     private String image;
 
-//    @ManyToOne
-//    private Users user;
-//    @ManyToOne
+    private Users user;
 //    private Books book;
 
 
@@ -91,5 +91,13 @@ public class SuggestionDTO {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
     }
 }
