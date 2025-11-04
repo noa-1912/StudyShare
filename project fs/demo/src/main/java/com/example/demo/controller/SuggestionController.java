@@ -68,6 +68,9 @@ public class SuggestionController {
 
         try {
             //כאן נשמר התמונה כולל הסיומת שלו
+            System.out.println("📦 File = " + (file != null ? file.getOriginalFilename() : "null"));
+            System.out.println("🧾 Suggestion = " + s.getContent());
+
             ImageUtils.uploadImage(file);
             s.setImagePath(file.getOriginalFilename());//שמירת שם התומנה עם הסיומת שלה לל
             Suggestion suggestion = suggestionRepository.save(s);

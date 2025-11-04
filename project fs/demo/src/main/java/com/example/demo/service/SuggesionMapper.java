@@ -18,7 +18,6 @@ public interface SuggesionMapper {
         SuggestionDTO suggestionDTO=new SuggestionDTO();
 
         suggestionDTO.setUser(s.getUser());
-        suggestionDTO.setId(s.getId());
         suggestionDTO.setContent(s.getContent());
         suggestionDTO.setPage(s.getPage());
         suggestionDTO.setExercise(s.getExercise());
