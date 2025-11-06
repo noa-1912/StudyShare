@@ -5,9 +5,13 @@ import com.example.demo.model.Solutions;
 import org.mapstruct.Mapper;
 
 import java.io.IOException;
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface SolutionsMapper{
+
+    List<SolutionsDTO> mapSolutionsDTOList(List<Solutions> list);
+    SolutionsDTO mapSolutionsDTO(Solutions solutions);
 
     default SolutionsDTO solutionsDTO(Solutions s)throws IOException {
         SolutionsDTO solutionsDTO=new SolutionsDTO();

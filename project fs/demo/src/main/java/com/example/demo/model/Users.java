@@ -23,6 +23,7 @@ public class Users {
     private List<Suggestion> suggestion;
     @OneToMany(mappedBy = "user")
     private List<Comments> comments;
+    private String imagePath;
 
     public Long getId() {
         return id;
@@ -88,10 +89,16 @@ public class Users {
         this.comments = comments;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
     public Users() {
     }
 
-    public Users(Long id, String name, String email, String password, LocalDate date, List<Solutions> solutions, List<Suggestion> suggestions, List<Comments> comments) {
+    public Users(Long id, String name, String email, String password, LocalDate date, List<Solutions> solutions, List<Suggestion> suggestions, List<Comments> comments, String imagePath) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -100,5 +107,6 @@ public class Users {
         this.solutions = solutions;
         this.suggestion = suggestion;
         this.comments = comments;
+        this.imagePath = imagePath;
     }
 }

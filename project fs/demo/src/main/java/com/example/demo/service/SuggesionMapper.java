@@ -9,10 +9,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Base64;
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface SuggesionMapper {
 
+    List<SuggestionDTO> map(List<Suggestion> suggestions);
+    SuggestionDTO map(Suggestion suggestion);
 
     default SuggestionDTO suggestionDto(Suggestion s) throws IOException {
         SuggestionDTO suggestionDTO=new SuggestionDTO();
