@@ -16,7 +16,7 @@ import java.util.List;
 public interface SuggesionMapper {
 UsersMapper INSTANCE= Mappers.getMapper(UsersMapper.class);
     List<SuggestionDTO> map(List<Suggestion> suggestions);
-    SuggestionDTO map(Suggestion suggestion);
+   Suggestion suggestionDTOtoSuggestion(SuggestionDTO suggestion);
 
     default SuggestionDTO suggestionDto(Suggestion s) throws IOException {
         SuggestionDTO suggestionDTO=new SuggestionDTO();

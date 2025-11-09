@@ -1,7 +1,9 @@
 package com.example.demo.service;
 
 import com.example.demo.dto.SolutionsDTO;
+import com.example.demo.dto.SuggestionDTO;
 import com.example.demo.model.Solutions;
+import com.example.demo.model.Suggestion;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -13,7 +15,8 @@ public interface SolutionsMapper{
     UsersMapper INSTANCE= Mappers.getMapper(UsersMapper.class);
 
     List<SolutionsDTO> mapSolutionsDTOList(List<Solutions> list);
-SolutionsDTO mapSolutionsDTO(Solutions solutions);
+    Solutions solutionsDTOtoSolutionsn(SolutionsDTO solutions);
+
 
     default SolutionsDTO solutionsDTO(Solutions s)throws IOException {
         SolutionsDTO solutionsDTO=new SolutionsDTO();
