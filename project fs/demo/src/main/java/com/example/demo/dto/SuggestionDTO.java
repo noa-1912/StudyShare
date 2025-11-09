@@ -17,7 +17,7 @@ public class SuggestionDTO {
     private String imagePath;
     private String image;
 
-    private Users user;
+    private UsersDTO user;
 //    private Books book;
 
 
@@ -93,11 +93,11 @@ public class SuggestionDTO {
         this.image = image;
     }
 
-    public Users getUser() {
+    public UsersDTO getUserDTO() {
         return user;
     }
 
-    public void setUser(Users user) {
+    public void setUserDTO(UsersDTO user) {
         this.user = user;
     }
 }

@@ -18,7 +18,7 @@ import java.util.List;
 public interface UsersMapper {
     default UsersDTO usersDTO(Users u) throws IOException {
         UsersDTO usersDTO=new UsersDTO();
-//        usersDTO.setId(u.getId());//לבדוק
+        usersDTO.setId(u.getId());
         usersDTO.setName(u.getName());
         usersDTO.setEmail(u.getEmail());
         usersDTO.setDate(u.getDate());
@@ -27,6 +27,7 @@ public interface UsersMapper {
         usersDTO.setImage(ImageUtils.getImage(u.getImagePath()));
         return usersDTO;
     }
+    UsersDTO usersToUsersDTO(Users u);
 
 
 }

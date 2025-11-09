@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.dto.SuggestionDTO;
 import com.example.demo.model.Suggestion;
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,14 +14,14 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface SuggesionMapper {
-
+UsersMapper INSTANCE= Mappers.getMapper(UsersMapper.class);
     List<SuggestionDTO> map(List<Suggestion> suggestions);
     SuggestionDTO map(Suggestion suggestion);
 
     default SuggestionDTO suggestionDto(Suggestion s) throws IOException {
         SuggestionDTO suggestionDTO=new SuggestionDTO();
 
-        suggestionDTO.setUser(s.getUser());
+        suggestionDTO.setUserDTO(INSTANCE.usersToUsersDTO(s.getUser()));
         suggestionDTO.setContent(s.getContent());
         suggestionDTO.setPage(s.getPage());
         suggestionDTO.setExercise(s.getExercise());
