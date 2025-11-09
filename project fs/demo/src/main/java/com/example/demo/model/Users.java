@@ -1,12 +1,12 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Users {
@@ -24,6 +24,10 @@ public class Users {
     @OneToMany(mappedBy = "user")
     private List<Comments> comments;
     private String imagePath;
+
+    @ManyToMany
+    @JsonIgnore
+    private Set<Role> roles=new HashSet<>();
 
     public Long getId() {
         return id;
@@ -96,6 +100,14 @@ public class Users {
         this.imagePath = imagePath;
     }
     public Users() {
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public Users(Long id, String name, String email, String password, LocalDate date, List<Solutions> solutions, List<Suggestion> suggestions, List<Comments> comments, String imagePath) {
