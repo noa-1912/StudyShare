@@ -24,7 +24,6 @@ public class Users {
     @OneToMany(mappedBy = "user")
     private List<Comments> comments;
     private String imagePath;
-
     @ManyToMany
     @JsonIgnore
     private Set<Role> roles=new HashSet<>();
