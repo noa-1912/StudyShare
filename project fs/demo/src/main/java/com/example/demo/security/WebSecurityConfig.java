@@ -83,12 +83,12 @@ public class WebSecurityConfig {
 
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/h2-console/**").permitAll()
-                                .requestMatchers("/api/user/signin").permitAll()
-                                .requestMatchers("/api/user/signup").permitAll()
-                                .requestMatchers("/api/user/**").permitAll()
-                                .requestMatchers("/api/**").permitAll()                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
-                                .requestMatchers("/error").permitAll()
+                                auth.requestMatchers("/h2-console/**").permitAll()
+                                        .requestMatchers("/api/user/signin").permitAll()
+                                        .requestMatchers("/api/user/signup").permitAll()
+                                        .requestMatchers("/api/user/**").permitAll()
+                                        .requestMatchers("/api/**").permitAll()                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
+                                        .requestMatchers("/error").permitAll()
 //                                        //כל שאר הפונקציות ישארו חסומות אך ורק למשתמשים שנכנסו
 //                                        //אם רוצים אפשר לאפשר פונקציות מסוימות או קונטרולים מסוימים לכל המשתמשים
 //                                        //לדוג'
@@ -106,7 +106,6 @@ public class WebSecurityConfig {
 
         //***********משמעות הגדרה זו:
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-
 
         return http.build();
     }

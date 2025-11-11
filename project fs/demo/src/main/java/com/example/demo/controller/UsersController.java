@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.Users;
 import com.example.demo.security.CustomUserDetails;
 import com.example.demo.security.jwt.JwtUtils;
+import com.example.demo.service.ImageUtils;
 import com.example.demo.service.RoleRepository;
 import com.example.demo.service.SuggestionRepository;
 import com.example.demo.service.UsersRepository;
@@ -17,6 +18,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/api/user")
@@ -55,15 +60,18 @@ public  UsersController(UsersRepository usersRepository,RoleRepository roleRepos
 
     //הרשמות
     @PostMapping("/signup")
-    public ResponseEntity<Users> signUp(@RequestBody Users user){
+    public ResponseEntity<Users> signUp(@RequestPart("user") Users user, @RequestPart("image") MultipartFile file) throws IOException {
     //נבדוק ששם משתמש לא קיים
         Users u=usersRepository.findByEmail(user.getEmail());
         if(u!=null)
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+        ImageUtils.uploadImage(file);
+        user.setImagePath(file.getOriginalFilename());
         //לפני שמירצ הסיסמה נעשה הצפנה
         String pass=user.getPassword();//סיסמה לא מוצפנת
         user.setPassword(new BCryptPasswordEncoder().encode(pass));//סיסמה מוצפנת
-
+        user.setDate(LocalDate.now());
 
         user.getRoles().add(roleRepository.findById((long)1).get());
         usersRepository.save(user);
