@@ -20,7 +20,7 @@ public class Suggestion {
     private String imagePath;
     @JsonIgnoreProperties("suggestion")
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+
     private Users user;
     @ManyToOne
     private Books book;
