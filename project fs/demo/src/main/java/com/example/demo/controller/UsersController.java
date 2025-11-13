@@ -1,5 +1,6 @@
 package com.example.demo.controller;
-
+import java.nio.file.Path;
+import java.nio.file.Files;
 import com.example.demo.model.Users;
 import com.example.demo.security.CustomUserDetails;
 import com.example.demo.security.jwt.JwtUtils;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 
 @RestController
@@ -53,9 +55,13 @@ public  UsersController(UsersRepository usersRepository,RoleRepository roleRepos
         CustomUserDetails userDetails=(CustomUserDetails)authentication.getPrincipal();
 
         ResponseCookie jwtCookie=jwtUtils.generateJwtCookie(userDetails);
+        Users fullUser = usersRepository.findByEmail(userDetails.getUsername());
+        if (fullUser == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        }
 
         return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,jwtCookie.toString())
-                .body(userDetails.getUsername());
+                .body(fullUser);
     }
 
     //הרשמות
@@ -86,4 +92,20 @@ public  UsersController(UsersRepository usersRepository,RoleRepository roleRepos
         return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,cookie.toString())
                 .body("you've been signed out!");
     }
+    @GetMapping("/image/{filename:.+}")
+    public ResponseEntity<byte[]> getUserImage(@PathVariable String filename) {
+        try {
+            // אותו הנתיב שבו נשמרות התמונות
+            Path imagePath = Paths.get(System.getProperty("user.dir") + "\\images\\" + filename);
+            byte[] imageBytes = Files.readAllBytes(imagePath);
+
+            return ResponseEntity.ok()
+                    .header("Content-Type", Files.probeContentType(imagePath))
+                    .body(imageBytes);
+        } catch (IOException e) {
+            System.out.println("❌ שגיאה בקריאת תמונת משתמש: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
 }

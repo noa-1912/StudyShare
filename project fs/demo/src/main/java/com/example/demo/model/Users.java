@@ -19,7 +19,8 @@ public class Users {
     private LocalDate date;
     @OneToMany(mappedBy = "user")
     private List<Solutions> solutions;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Suggestion> suggestion;
     @OneToMany(mappedBy = "user")
     private List<Comments> comments;

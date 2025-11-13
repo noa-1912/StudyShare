@@ -100,4 +100,11 @@ public class SuggestionDTO {
     public void setUserDTO(UsersDTO user) {
         this.user = user;
     }
+//public UsersDTO getUser() {
+//    return user;
+//}
+//
+//    public void setUser(UsersDTO user) {
+//        this.user = user;
+//    }
 }
