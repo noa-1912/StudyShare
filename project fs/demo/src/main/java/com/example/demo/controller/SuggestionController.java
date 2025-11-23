@@ -8,6 +8,7 @@ import com.example.demo.service.ImageUtils;
 import com.example.demo.service.SuggesionMapper;
 import com.example.demo.service.SuggestionRepository;
 import com.example.demo.service.UsersRepository;
+import org.springframework.transaction.annotation.Transactional; // ⬅️ זה הנדרש
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,6 +39,7 @@ UsersRepository usersRepository;
 
     //מחזירה בקשה לפי ID
     @GetMapping("/getSuggestion/{id}")
+    @Transactional
     public ResponseEntity<SuggestionDTO> get(@PathVariable long id) throws IOException {
         Suggestion s = suggestionRepository.findById(id).get();
         if (s != null)

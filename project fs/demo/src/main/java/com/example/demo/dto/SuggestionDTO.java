@@ -1,12 +1,17 @@
 package com.example.demo.dto;
 
 
+import com.example.demo.model.Books;
 import com.example.demo.model.Users;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import java.time.LocalDate;
 
 public class SuggestionDTO {
 
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private Books books;
     private Long id;
     private int page;
     private int exercise;
@@ -100,7 +105,15 @@ public class SuggestionDTO {
     public void setUserDTO(UsersDTO user) {
         this.user = user;
     }
-//public UsersDTO getUser() {
+
+    public Books getBooks() {
+        return books;
+    }
+
+    public void setBooks(Books books) {
+        this.books = books;
+    }
+    //public UsersDTO getUser() {
 //    return user;
 //}
 //

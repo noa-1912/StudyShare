@@ -23,6 +23,7 @@ public class Suggestion {
 
     private Users user;
     @ManyToOne
+    @JoinColumn(name = "book_id")
     private Books book;
 
     public Books getBooks() {
