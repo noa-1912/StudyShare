@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -13,6 +14,8 @@ public class Subjects {
  @Id
  private Long id;
 private String subjectName;
+
+ @JsonIgnore
 @OneToMany(mappedBy = "subject")
 private List<Books> books;
 

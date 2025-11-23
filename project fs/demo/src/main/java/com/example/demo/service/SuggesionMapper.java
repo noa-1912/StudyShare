@@ -22,6 +22,7 @@ UsersMapper INSTANCE= Mappers.getMapper(UsersMapper.class);
         SuggestionDTO suggestionDTO=new SuggestionDTO();
 
         suggestionDTO.setUserDTO(INSTANCE.usersToUsersDTO(s.getUser()));
+        suggestionDTO.setId(s.getId());
         suggestionDTO.setContent(s.getContent());
         suggestionDTO.setPage(s.getPage());
         suggestionDTO.setExercise(s.getExercise());

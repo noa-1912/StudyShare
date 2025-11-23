@@ -1,4 +1,8 @@
 package com.example.demo.service;
 
-public interface  BooksRepository {
+import com.example.demo.model.Books;
+import com.example.demo.model.Suggestion;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface  BooksRepository extends JpaRepository<Books, Long> {
 }

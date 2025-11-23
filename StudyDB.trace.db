@@ -884,3 +884,443 @@ create global temporary table HTE_solutions(exercise integer, page integer, rn_ 
 2025-11-13 13:58:21.335492+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
 create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-13 16:01:30.415020+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-16 12:37:02.299749+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-16 17:46:22.343464+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-16 18:03:17.642591+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-16 20:07:47.925094+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-16 20:44:42.110496+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-16 20:45:44.961128+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-18 09:58:09.572592+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-18 13:59:22.833507+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:10:23.512869+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:11:48.331661+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:14:42.675801+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:20:31.547704+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:23:47.368375+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:33:25.190863+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:33:47.355678+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:36:58.927619+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:38:20.251181+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:43:05.995601+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:43:16.849147+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 20:43:29.541846+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 22:43:47.683063+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 22:45:24.300352+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 22:46:36.094537+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 23:20:21.859177+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 23:28:08.677778+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-22 23:56:43.601177+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 10:30:14.918287+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 10:53:29.888304+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 10:54:56.033113+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 11:26:07.853793+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 11:36:21.815162+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 11:41:11.525498+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 12:09:27.949278+02:00 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+UPDATE "PUBLIC"."BOOKS" SET "ID"=? ,"SUBJECT_ID"=? ,"AUTHOR"=? ,"BOOK_NAME"=? ,"DESCRIPTION"=?  WHERE "ID"=? [22018-232]
+2025-11-23 12:09:27.949278+02:00 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+UPDATE "PUBLIC"."BOOKS" SET "ID"=? ,"SUBJECT_ID"=? ,"AUTHOR"=? ,"BOOK_NAME"=? ,"DESCRIPTION"=?  WHERE "ID"=? [22018-232]
+2025-11-23 12:09:45.114164+02:00 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+UPDATE "PUBLIC"."BOOKS" SET "ID"=? ,"SUBJECT_ID"=? ,"AUTHOR"=? ,"BOOK_NAME"=? ,"DESCRIPTION"=?  WHERE "ID"=? [22018-232]
+2025-11-23 12:09:45.114164+02:00 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+UPDATE "PUBLIC"."BOOKS" SET "ID"=? ,"SUBJECT_ID"=? ,"AUTHOR"=? ,"BOOK_NAME"=? ,"DESCRIPTION"=?  WHERE "ID"=? [22018-232]
+2025-11-23 12:11:47.546806+02:00 jdbc[22]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot truncate "PUBLIC.BOOKS"; SQL statement:
+TRUNCATE TABLE Books [90106-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.TruncateTable.update(TruncateTable.java:42)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp.query(WebApp.java:1118)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.demo.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-11-23 12:14:57.168143+02:00 jdbc[22]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES\000d\000a(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a---\000d\000a(10, 'Math Part A – חלק א׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(11, 'Math Part B [*]– חלק ב׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(12, 'Graphs & Functions – גרפים ופונקציות (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(13, 'Algebra Advanced – אלגברה מתקדמת (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(14, 'Analytic Geometry – גיאומטריה אנליטית (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a---\000d\000a(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a---\000d\000a(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a---\000d\000a(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),\000d\000a(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),\000d\000a(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב');"; SQL statement:
+INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES
+(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+---
+(10, 'Math Part A – חלק א׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(11, 'Math Part B – חלק ב׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(12, 'Graphs & Functions – גרפים ופונקציות (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(13, 'Algebra Advanced – אלגברה מתקדמת (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(14, 'Analytic Geometry – גיאומטריה אנליטית (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+---
+(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+---
+(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+---
+(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),
+(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),
+(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'); [42000-232]
+2025-11-23 12:15:03.025720+02:00 jdbc[22]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES\000d\000a(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a---\000d\000a(10, 'Math Part A – חלק א׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(11, 'Math Part B [*]– חלק ב׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(12, 'Graphs & Functions – גרפים ופונקציות (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(13, 'Algebra Advanced – אלגברה מתקדמת (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),BOOKS \000d\000a(14, 'Analytic Geometry – גיאומטריה אנליטית (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a---\000d\000a(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a---\000d\000a(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a---\000d\000a(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),\000d\000a(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),\000d\000a(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב');"; SQL statement:
+INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES
+(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+---
+(10, 'Math Part A – חלק א׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(11, 'Math Part B – חלק ב׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(12, 'Graphs & Functions – גרפים ופונקציות (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(13, 'Algebra Advanced – אלגברה מתקדמת (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),BOOKS 
+(14, 'Analytic Geometry – גיאומטריה אנליטית (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+---
+(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+---
+(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+---
+(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),
+(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),
+(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'); [42000-232]
+2025-11-23 12:15:41.330162+02:00 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES\000d\000a(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a---\000d\000a(10, 'Math Part A – חלק א׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(11, 'Math Part B [*]– חלק ב׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(12, 'Graphs & Functions – גרפים ופונקציות (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(13, 'Algebra Advanced – אלגברה מתקדמת (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(14, 'Analytic Geometry – גיאומטריה אנליטית (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a---\000d\000a(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a---\000d\000a(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a---\000d\000a(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),\000d\000a(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),\000d\000a(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב');"; SQL statement:
+INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES
+(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+---
+(10, 'Math Part A – חלק א׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(11, 'Math Part B – חלק ב׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(12, 'Graphs & Functions – גרפים ופונקציות (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(13, 'Algebra Advanced – אלגברה מתקדמת (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(14, 'Analytic Geometry – גיאומטריה אנליטית (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+---
+(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+---
+(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+---
+(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),
+(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),
+(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'); [42000-232]
+2025-11-23 12:15:44.149072+02:00 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES\000d\000a(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),\000d\000a---\000d\000a(10, 'Math Part A – חלק א׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(11, 'Math Part B [*]– חלק ב׳ (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(12, 'Graphs & Functions – גרפים ופונקציות (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(13, 'Algebra Advanced – אלגברה מתקדמת (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a(14, 'Analytic Geometry – גיאומטריה אנליטית (י\\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),\000d\000a---\000d\000a(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),\000d\000a---\000d\000a(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),\000d\000a---\000d\000a(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a---\000d\000a(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),\000d\000a---\000d\000a(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),\000d\000a(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),\000d\000a(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),\000d\000a(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב');"; SQL statement:
+INSERT INTO Books (id, bookName, author, description, subject, suggestion, solutions, subjectType, grade) VALUES
+(2, 'Geometry Foundations – גיאומטריה (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(3, 'Functions Introduction – פונקציות בסיס (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+(4, 'Equations & Inequalities – משוואות ואי־שוויונים (ט)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'ט'),
+---
+(10, 'Math Part A – חלק א׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(11, 'Math Part B – חלק ב׳ (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(12, 'Graphs & Functions – גרפים ופונקציות (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(13, 'Algebra Advanced – אלגברה מתקדמת (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+(14, 'Analytic Geometry – גיאומטריה אנליטית (י\')', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'י'),
+---
+(20, 'Trigonometry 4p – טריגונומטריה (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(21, 'Quadratic & Exponential – ריבועיות ומעריכיות (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(22, 'Basic Probability – הסתברות בסיסית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(23, 'Analytic Geometry – גיאומטריה אנליטית (י״א, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(40, 'Trigonometry 5p – טריגונומטריה (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(41, 'Differential Calculus – חשבון דיפרנציאלי (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(42, 'Basic Integral – אינטגרלים בסיסיים (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+(43, 'Sequences – סדרות (י״א, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יא'),
+---
+(30, 'Exam 402 Practice – שאלון 402 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(31, 'Exam 403 Practice – שאלון 403 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(32, 'Derivatives & Graphs – נגזרות וגרפים (י״ב, 4 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(50, 'Optimization – בעיות קיצון (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(51, 'Motion Problems – בעיות תנועה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(52, 'Advanced Integrals – אינטגרלים מתקדמים (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(53, 'Probability & Statistics – הסתברות וסטטיסטיקה (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(54, 'Logarithms & Exponents – לוגריתמים וחזקות (י״ב, 5 יח״ל)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(55, 'Parametric Equations – משוואות פרמטריות (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(56, 'Exam 802 Practice – שאלוני 802 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+(57, 'Exam 807 Practice – שאלוני 807 (י״ב)', 'יואל גבע', '', NULL, '[]', '[]', 'math', 'יב'),
+---
+(70, 'Grammar for 4 Points – דקדוק 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(71, 'Reading 4 Units – הבנת הנקרא 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(72, 'Vocabulary 4p – אוצר מילים 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(73, 'Writing Practice – כתיבה 4 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+---
+(80, 'Grammar for 5 Points – דקדוק 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(81, 'Reading 5 Units – הבנת הנקרא 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(82, 'Literature for 5 Units – ספרות 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+(83, 'Writing 5 Units – כתיבה 5 יח״ל', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'),
+---
+(90, 'English for 9th Grade – אנגלית כיתה ט', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'ט'),
+(91, 'English for 10th Grade – אנגלית כיתה י', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'י'),
+(92, 'English Level Boost – חיזוק אנגלית י״א', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יא'),
+(93, 'English for 12th Grade – אנגלית י״ב', 'Yoel Geva', '', NULL, '[]', '[]', 'english', 'יב'); [42000-232]
+2025-11-23 12:27:09.949424+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 12:38:39.685654+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 12:40:13.251380+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 13:08:04.585170+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-23 17:52:16.630785+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]

@@ -87,7 +87,10 @@ public class WebSecurityConfig {
                                         .requestMatchers("/api/user/signin").permitAll()
                                         .requestMatchers("/api/user/signup").permitAll()
                                         .requestMatchers("/api/user/**").permitAll()
-                                        .requestMatchers("/api/**").permitAll()                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
+
+                                        .requestMatchers("/api/**").permitAll()
+                                        .requestMatchers("/api/chat**").permitAll()                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
+//כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
                                         .requestMatchers("/error").permitAll()
 //                                        //כל שאר הפונקציות ישארו חסומות אך ורק למשתמשים שנכנסו
 //                                        //אם רוצים אפשר לאפשר פונקציות מסוימות או קונטרולים מסוימים לכל המשתמשים

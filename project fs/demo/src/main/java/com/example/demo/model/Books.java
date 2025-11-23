@@ -21,6 +21,7 @@ public class Books {
     @OneToMany(mappedBy = "book")
     @JsonIgnore
     private List<Solutions> solutions;
+    private String grade;
 
     public String getBookName() {
         return bookName;
@@ -78,10 +79,18 @@ public class Books {
         this.solutions = solutions;
     }
 
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
     public Books() {
     }
 
-    public Books(Long id, String bookName, String author, String description, Subjects subject, List<Suggestion> suggestion, List<Solutions> solutions) {
+    public Books(Long id, String bookName, String author, String description, Subjects subject, List<Suggestion> suggestion, List<Solutions> solutions,String grade) {
         this.id = id;
         this.bookName = bookName;
         this.author = author;
@@ -89,5 +98,6 @@ public class Books {
         this.subject = subject;
         this.suggestion = suggestion;
         this.solutions = solutions;
+        this.grade=grade;
     }
 }
