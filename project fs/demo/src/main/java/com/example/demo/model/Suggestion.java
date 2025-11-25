@@ -26,13 +26,8 @@ public class Suggestion {
     @JoinColumn(name = "book_id")
     private Books book;
 
-    public Books getBooks() {
-        return book;
-    }
 
-    public void setBooks(Books books) {
-        this.book = books;
-    }
+
 
     public Suggestion() {
     }
@@ -53,7 +48,7 @@ public class Suggestion {
         this.book = book;
     }
 
-    public Suggestion(Long id, int page, int exercise, int section, int subSection, String content, LocalDate uploadDate, Users user, Books books, String imagePath) {
+    public Suggestion(Long id, int page, int exercise, int section, int subSection, String content, LocalDate uploadDate, Users user, Books book, String imagePath) {
         this.id = id;
         this.page = page;
         this.exercise = exercise;
@@ -62,7 +57,7 @@ public class Suggestion {
         this.content = content;
         this.uploadDate = uploadDate;
         this.user = user;
-        this.book = books;
+        this.book = book;
         this.imagePath = imagePath;
     }
 

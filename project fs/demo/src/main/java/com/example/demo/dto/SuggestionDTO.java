@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class SuggestionDTO {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Books books;
+    private Books book;
     private Long id;
     private int page;
     private int exercise;
@@ -106,12 +106,12 @@ public class SuggestionDTO {
         this.user = user;
     }
 
-    public Books getBooks() {
-        return books;
+    public Books getBook() {
+        return book;
     }
 
-    public void setBooks(Books books) {
-        this.books = books;
+    public void setBook(Books book) {
+        this.book = book;
     }
     //public UsersDTO getUser() {
 //    return user;

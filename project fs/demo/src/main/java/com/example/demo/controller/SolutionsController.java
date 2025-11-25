@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.SolutionsDTO;
 import com.example.demo.dto.SuggestionDTO;
+import com.example.demo.model.Books;
 import com.example.demo.model.Solutions;
 import com.example.demo.model.Suggestion;
 import com.example.demo.service.ImageUtils;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @RequestMapping("api/solution")
 @RestController
@@ -56,6 +58,34 @@ public class SolutionsController {
         }
 
 
+    }
+
+
+
+    @GetMapping("/searchSolutions/{bookId}/{page}/{exercise}")
+    public ResponseEntity<List<SolutionsDTO>> getAllSolutions(
+            @PathVariable Long bookId,
+            @PathVariable int page,
+            @PathVariable int exercise
+    ) throws IOException {
+
+        List<Solutions> solutions =
+                solutionsRepository.findSolutionsByBook_IdAndPageAndExercise(bookId, page, exercise);
+        if (solutions.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        List<SolutionsDTO> dtos = solutions.stream()
+                .map(s -> {
+                    try {
+                        return solutionsMapper.solutionsDTO(s);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .toList();
+
+        return new ResponseEntity<>(dtos, HttpStatus.OK);
     }
 
 }

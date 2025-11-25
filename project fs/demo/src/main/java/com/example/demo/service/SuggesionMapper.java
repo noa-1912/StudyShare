@@ -22,7 +22,7 @@ UsersMapper INSTANCE= Mappers.getMapper(UsersMapper.class);
         SuggestionDTO suggestionDTO=new SuggestionDTO();
 
         suggestionDTO.setUserDTO(INSTANCE.usersToUsersDTO(s.getUser()));
-        suggestionDTO.setBooks(s.getBooks());
+        suggestionDTO.setBook(s.getBook());
         suggestionDTO.setId(s.getId());
         suggestionDTO.setContent(s.getContent());
         suggestionDTO.setPage(s.getPage());
