@@ -28,6 +28,7 @@ public interface SolutionsMapper{
         solutionsDTO.setSubSection(s.getSubSection());
         solutionsDTO.setUploadDate(s.getUploadDate());
         solutionsDTO.setAvg(s.getAvg());
+        solutionsDTO.setBook(s.getBook());
         solutionsDTO.setImage(ImageUtils.getImage(s.getImagePath()));
         return solutionsDTO;
     }
