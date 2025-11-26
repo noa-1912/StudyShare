@@ -179,12 +179,19 @@ public class SuggestionController {
     // ============================
     @GetMapping("/getSuggestion")
     public ResponseEntity<List<SuggestionDTO>> getAllSuggestions() throws IOException {
+
         List<Suggestion> suggestions = suggestionRepository.findAll();
-        if (suggestions.isEmpty()) {
+
+        // ❗ מסנן Solutions
+        List<Suggestion> onlySuggestions = suggestions.stream()
+                .filter(s -> !(s instanceof com.example.demo.model.Solutions))
+                .toList();
+
+        if (onlySuggestions.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        List<SuggestionDTO> dtos = suggestions.stream()
+        List<SuggestionDTO> dtos = onlySuggestions.stream()
                 .map(s -> {
                     try {
                         return suggesionMapper.suggestionDto(s);
@@ -197,13 +204,14 @@ public class SuggestionController {
         return new ResponseEntity<>(dtos, HttpStatus.OK);
     }
 
+
     // ============================
     //   uploadSuggestion + image
     // ============================
 //@PreAuthorize("hasRole('ROLE_USER')")
 
     @PostMapping("/uploadSuggestion")
-    public ResponseEntity<Suggestion> uploadSaggestionWithImage(
+    public ResponseEntity<SuggestionDTO> uploadSaggestionWithImage(
             @RequestPart("image") MultipartFile file,
             @RequestPart("suggestion") Suggestion s) {
 
@@ -221,8 +229,11 @@ public class SuggestionController {
             ImageUtils.uploadImage(file);
             s.setImagePath(file.getOriginalFilename());
 
-            Suggestion suggestion = suggestionRepository.save(s);
-            return new ResponseEntity<>(suggestion, HttpStatus.CREATED);
+//            Suggestion suggestion = suggestionRepository.save(s);
+//            return new ResponseEntity<>(suggestion, HttpStatus.CREATED);
+            Suggestion saved = suggestionRepository.save(s);
+            SuggestionDTO dto = suggesionMapper.suggestionDto(saved);
+            return new ResponseEntity<>(dto, HttpStatus.CREATED);
 
         } catch (IOException e) {
             System.out.println(e);
