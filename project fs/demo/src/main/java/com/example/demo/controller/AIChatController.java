@@ -16,9 +16,18 @@ private AIChatService aiChatService;
         this.aiChatService = aiChatService;
     }
 
-    @GetMapping("/chat")
-    public  String getResponse(@RequestBody ChatRequest chatRequest) {
+//    @GetMapping("/chat")
+//    public  String getResponse(@RequestBody ChatRequest chatRequest) {
+//
+//        return aiChatService.getResponse2(chatRequest.message(), chatRequest.conversationId());
+//    }
 
-        return aiChatService.getResponse2(chatRequest.message(), chatRequest.conversationId());
+    @PostMapping("/chat")
+    public String getResponse(@RequestBody ChatRequest chatRequest) {
+        return aiChatService.getResponse2(
+                chatRequest.message(),
+                chatRequest.conversationId()
+        );
     }
+
 }

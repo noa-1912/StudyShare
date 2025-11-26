@@ -174,9 +174,36 @@ public class SuggestionController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+
     // ============================
     //   getAllSuggestions
     // ============================
+//    @GetMapping("/getSuggestionByUser")
+//    public ResponseEntity<List<SuggestionDTO>> getAllSuggestionsByUserId() throws IOException {
+//
+//        List<Suggestion> suggestions = suggestionRepository.findAllByUserId();
+//
+//        // ❗ מסנן Solutions
+//        List<Suggestion> onlySuggestions = suggestions.stream()
+//                .filter(s -> !(s instanceof com.example.demo.model.Solutions))
+//                .toList();
+//
+//        if (onlySuggestions.isEmpty()) {
+//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//        }
+//
+//        List<SuggestionDTO> dtos = onlySuggestions.stream()
+//                .map(s -> {
+//                    try {
+//                        return suggesionMapper.suggestionDto(s);
+//                    } catch (IOException e) {
+//                        throw new RuntimeException(e);
+//                    }
+//                })
+//                .toList();
+//
+//        return new ResponseEntity<>(dtos, HttpStatus.OK);
+//    }
     @GetMapping("/getSuggestion")
     public ResponseEntity<List<SuggestionDTO>> getAllSuggestions() throws IOException {
 
@@ -203,6 +230,7 @@ public class SuggestionController {
 
         return new ResponseEntity<>(dtos, HttpStatus.OK);
     }
+
 
 
     // ============================
