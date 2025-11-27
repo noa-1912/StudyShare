@@ -7,6 +7,7 @@ import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.SystemMessage;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 @Service
 public class AIChatService {
     private  final ChatClient chatClient;
-private final ChatMemory chatMemory;
+    private final ChatMemory chatMemory;
     private final static String SYSTEM_INSTRUCTION= """
             אתה עוזר לימודי באתר Study-Share. מטרתך לעזור לתלמידים להבין חומר לימודי במתמטיקה ובאנגלית (כיתות ט–י"ב).
             
@@ -56,19 +57,44 @@ private final ChatMemory chatMemory;
 
     }
     public String getResponse2(String prompt,String conversationId){
-List<Message> messageList=new ArrayList<>();
-messageList.add(new SystemMessage(SYSTEM_INSTRUCTION));
-messageList.addAll(chatMemory.get(conversationId));
-UserMessage userMessage=new UserMessage(prompt);
-messageList.add(userMessage);
-String aiResponse=chatClient.prompt().messages(messageList).call()
-        .content();
+        List<Message> messageList=new ArrayList<>();
+        messageList.add(new SystemMessage(SYSTEM_INSTRUCTION));
+        messageList.addAll(chatMemory.get(conversationId));
+        UserMessage userMessage=new UserMessage(prompt);
+        messageList.add(userMessage);
+        String aiResponse=chatClient.prompt().messages(messageList).call()
+                .content();
         AssistantMessage aiMessage=new AssistantMessage(aiResponse);
         List<Message>messageList1=List.of(userMessage,aiMessage);
         chatMemory.add(conversationId,messageList1);
         return aiResponse;
 
     }
+
+
+    public Flux<String> streamResponse(String prompt, String conversationId) {
+
+        List<Message> history = new ArrayList<>();
+        history.add(new SystemMessage(SYSTEM_INSTRUCTION));
+        history.addAll(chatMemory.get(conversationId));
+
+        UserMessage userMessage = new UserMessage(prompt);
+        history.add(userMessage);
+
+        StringBuilder full = new StringBuilder();
+
+        return chatClient
+                .prompt()
+                .messages(history)
+                .stream()   // ← זה מפעיל STREAMING
+                .content()  // ← Flux<String>
+                .doOnNext(full::append)
+                .doOnComplete(() -> {
+                    AssistantMessage aiMsg = new AssistantMessage(full.toString());
+                    chatMemory.add(conversationId, List.of(userMessage, aiMsg));
+                });
+    }
+
 
 
 }

@@ -88,7 +88,7 @@ public class WebSecurityConfig {
                                         .requestMatchers("/api/user/signup").permitAll()
                                         .requestMatchers("/api/user/**").permitAll()
 
-                                        .requestMatchers("/api/**").permitAll()
+
                                         .requestMatchers("/api/chat**").permitAll()                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
 //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
                                         .requestMatchers("/error").permitAll()

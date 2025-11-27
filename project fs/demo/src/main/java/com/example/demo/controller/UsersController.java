@@ -92,6 +92,8 @@ public  UsersController(UsersRepository usersRepository,RoleRepository roleRepos
         return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,cookie.toString())
                 .body("you've been signed out!");
     }
+
+
     @GetMapping("/image/{filename:.+}")
     public ResponseEntity<byte[]> getUserImage(@PathVariable String filename) {
         try {
