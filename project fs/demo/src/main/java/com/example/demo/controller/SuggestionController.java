@@ -236,7 +236,7 @@ public class SuggestionController {
     // ============================
     //   uploadSuggestion + image
     // ============================
-//@PreAuthorize("hasRole('ROLE_USER')")
+@PreAuthorize("hasRole('ROLE_USER')")
 
     @PostMapping("/uploadSuggestion")
     public ResponseEntity<SuggestionDTO> uploadSaggestionWithImage(

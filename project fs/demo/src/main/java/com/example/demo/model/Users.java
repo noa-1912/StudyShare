@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ public class Users {
     private String password;
     private LocalDate date;
     @OneToMany(mappedBy = "user")
+    @JsonIgnoreProperties("user")
     private List<Solutions> solutions;
     @OneToMany(mappedBy = "user")
     @JsonIgnore
