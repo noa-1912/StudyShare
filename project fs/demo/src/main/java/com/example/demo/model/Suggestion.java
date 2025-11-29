@@ -18,9 +18,10 @@ public class Suggestion {
     private String content;
     private LocalDate uploadDate;
     private String imagePath;
-    @JsonIgnoreProperties("suggestion")
-    @ManyToOne
 
+
+    @ManyToOne
+    @JsonIgnoreProperties({"solutions", "suggestion", "comments"})
     private Users user;
     @ManyToOne
     @JoinColumn(name = "book_id")

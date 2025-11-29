@@ -87,9 +87,19 @@ public class WebSecurityConfig {
                                         .requestMatchers("/api/user/signin").permitAll()
                                         .requestMatchers("/api/user/signup").permitAll()
                                         .requestMatchers("/api/user/**").permitAll()
+                                         .requestMatchers("/api/book/**").permitAll()
+                                        .requestMatchers("/api/ai/chat/**").permitAll()
+                                        .requestMatchers("/api/solution/searchSolutions/**").permitAll()
+
+                                        .requestMatchers("/api/solution/getSolutions").permitAll()
+                                        .requestMatchers("/api/solution/image").permitAll()
+                                        .requestMatchers("/api/suggesion/image").permitAll()
+                                        .requestMatchers("/api/suggesion/getSuggestion/**").permitAll()
+                                        .requestMatchers("/api/suggesion/getSuggestion").permitAll()
 
 
-                                        .requestMatchers("/api/chat**").permitAll()                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
+
+                                        //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
 //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
                                         .requestMatchers("/error").permitAll()
 //                                        //כל שאר הפונקציות ישארו חסומות אך ורק למשתמשים שנכנסו

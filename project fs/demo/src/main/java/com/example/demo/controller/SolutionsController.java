@@ -10,6 +10,7 @@ import com.example.demo.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -99,6 +100,7 @@ public class SolutionsController {
 
 
     //העלאת פתרון חדש עם תמונה
+    @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping("/uploadSolutions")
     public ResponseEntity<SolutionsDTO> uploadSolutionsWithImage(
             @RequestPart("image") MultipartFile file,//מקבלת קובץ תמונה
@@ -147,6 +149,5 @@ public class SolutionsController {
 //
 //
 //    }
-
 
 }
