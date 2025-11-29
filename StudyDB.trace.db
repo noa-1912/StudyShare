@@ -1591,3 +1591,24 @@ create global temporary table HTE_solutions(exercise integer, page integer, rn_ 
 >>>>>>> ec0382d126bba5f906cadae4beb91a65f1c0b3d8
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
 create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 19:32:04.391935+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 20:25:29.827779+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 20:57:41.331899+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 21:17:12.657491+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 21:38:49.655992+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 21:44:05.194915+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-11-29 23:14:50.936223+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_SOLUTIONS" already exists; SQL statement:
+create global temporary table HTE_solutions(exercise integer, page integer, rn_ integer not null, section integer, sub_section integer, upload_date date, avg float(53), book_id bigint, id bigint, user_id bigint, content varchar(255), image_path varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]

@@ -8,14 +8,26 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Email;
 
 @Entity
 public class Users {
     @GeneratedValue
     @Id
     private Long id;
+
+    @NotBlank(message="יש להזין שם")
+    @Size(min=2, message="שם חייב להכיל לםחות 2 אותיות")
     private String name;
+
+    @NotBlank(message = "יש להזין אימייל")
+    @Email(message = "האימייל אינו תקין")
     private String email;
+
+    @NotBlank(message = "יש להזין סיסמה")
+    @Size(min = 4, message = "הסיסמה חייבת להכיל לפחות 4 תווים")
     private String password;
     private LocalDate date;
     @OneToMany(mappedBy = "user")

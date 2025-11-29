@@ -20,9 +20,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.LocalDate;
@@ -47,11 +49,24 @@ public class UsersController {
 
     //הרשמות
     @PostMapping("/signup")
-    public ResponseEntity<Users> signUp(@RequestPart("user") Users user, @RequestPart("image") MultipartFile file) throws IOException {
+    public ResponseEntity<?> signUp(
+            @Valid @RequestPart("user") Users user,// @Valid = עושה בדיקת ולידציה אוטומטית
+            BindingResult result, //יכיל אם יש שגיאות
+            @RequestPart("image") MultipartFile file) throws IOException {
+
+        if (result.hasErrors())//אם יש שגיאות וולדיציה
+            return ResponseEntity.badRequest().body(result.getAllErrors());// נחזיר 400 + פירוט השגיאה
+
+        // בדיקת תמונה חובה
+        if (file == null || file.isEmpty()) {
+            return ResponseEntity.badRequest().body("חובה להעלות תמונת פרופיל");
+        }
+
+
         //נבדוק שהמייל כבר לא קיים
         Users u = usersRepository.findByEmail(user.getEmail());
         if (u != null)//אם המייל קיים נחזיר תשובה של 400
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("מייל כבר בשימוש - נא להירשם עם מייל אחר", HttpStatus.BAD_REQUEST);
 
         ImageUtils.uploadImage(file);//שמירת התמונה בתיקייה
         user.setImagePath(file.getOriginalFilename());//שומרת את התמונת פרופיל למשתמש
@@ -72,24 +87,35 @@ public class UsersController {
     @PostMapping("/signin")
     //פונקציה מחזירה סטטוס ועוגייה ואת שם המשתמש
     public ResponseEntity<?> signin(@RequestBody Users u) {
-        Authentication authentication = authenticationManager
-                .authenticate(new UsernamePasswordAuthenticationToken(u.getEmail(), u.getPassword()));
 
-        //שומר את האימות במערכת האבטחה
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        //CustomUserDetails לוקח את פרטי המשתמש ומכניס אותם
-        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+        try {
 
-        //יוצר עוגייה עבור המשתמש - מה שמאפשר לו להשאר מחובר
-        ResponseCookie jwtCookie = jwtUtils.generateJwtCookie(userDetails);
-        //מוצאים את המייל של המשתמש מהDB לראות אם הוא משתמש קיים
-        Users fullUser = usersRepository.findByEmail(userDetails.getUsername());
-        if (fullUser == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+
+            Authentication authentication = authenticationManager // מנסה לבצע אימות לפי אימייל + סיסמה
+                    .authenticate(new UsernamePasswordAuthenticationToken(u.getEmail(), u.getPassword()));
+
+            //שומר את האימות במערכת האבטחה
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            //CustomUserDetails לוקח את פרטי המשתמש ומכניס אותם
+            CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+
+            //יוצר עוגייה עבור המשתמש - מה שמאפשר לו להשאר מחובר
+            ResponseCookie jwtCookie = jwtUtils.generateJwtCookie(userDetails);
+            //מוצאים את המייל של המשתמש מהDB לראות אם הוא משתמש קיים
+            Users fullUser = usersRepository.findByEmail(userDetails.getUsername());
+            if (fullUser == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+            }
+
+            fullUser.setPassword(null); // חובה – שלא נחזיר סיסמה ללקוח
+
+
+            //שולחים את העוגיה לאנגולר ומחזירים פרטי משתמש ללא סיסמה עם סטטוס 200
+            return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, jwtCookie.toString())
+                    .body(fullUser);
+        } catch (Exception e) {
+            return ResponseEntity.status(401).body("אימייל או סיסמה שגויים");
         }
-        //שולחים את העוגיה לאנגולר ומחזירים פרטי משתמש ללא סיסמה עם סטטוס 200
-        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, jwtCookie.toString())
-                .body(fullUser);
     }
 
 
