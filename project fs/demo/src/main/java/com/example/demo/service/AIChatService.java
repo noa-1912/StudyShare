@@ -14,9 +14,9 @@ import java.util.List;
 
 @Service
 public class AIChatService {
-    private  final ChatClient chatClient;
-    private final ChatMemory chatMemory;
-    private final static String SYSTEM_INSTRUCTION= """
+    private final ChatClient chatClient;//האוביקט שמדבר עם מודל הAI
+    private final ChatMemory chatMemory;//שומר את היסטוריית השיחה
+    private final static String SYSTEM_INSTRUCTION = """
             אתה עוזר לימודי באתר Study-Share. מטרתך לעזור לתלמידים להבין חומר לימודי במתמטיקה ובאנגלית (כיתות ט–י"ב).
             
             חוקים:
@@ -42,45 +42,52 @@ public class AIChatService {
             כל תשובה צריכה להיות קצרה, ברורה, וממוקדת בלמידה.
             
             """;
+
     public AIChatService(ChatClient.Builder chatClient, ChatMemory chatMemory) {
         this.chatClient = chatClient.build();
-        this.chatMemory=chatMemory;
+        this.chatMemory = chatMemory;
     }
 
-    public String getResponse(String prompt){
-        SystemMessage systemMessage=new SystemMessage(SYSTEM_INSTRUCTION);
-        UserMessage userMessage=new UserMessage(prompt);
+    //תשובה רגילה בלי זכרון ללא STREAMING
+    public String getResponse(String prompt) {
+        SystemMessage systemMessage = new SystemMessage(SYSTEM_INSTRUCTION);//מוסיפים את חוקי הצאט
+        UserMessage userMessage = new UserMessage(prompt);//מוסיפים את הודעת המשתמש
 
-        List<Message> messageList= List.of(systemMessage,userMessage);
+        List<Message> messageList = List.of(systemMessage, userMessage);//שולחים הכל לAI
 
-        return chatClient.prompt().messages(messageList).call().content();
+        return chatClient.prompt().messages(messageList).call().content();//מחזירים רגיל את התשובה
 
     }
-    public String getResponse2(String prompt,String conversationId){
-        List<Message> messageList=new ArrayList<>();
-        messageList.add(new SystemMessage(SYSTEM_INSTRUCTION));
+
+    //תשובה רגילה + זכרון שיחה
+    public String getResponse2(String prompt, String conversationId) {
+        List<Message> messageList = new ArrayList<>();
+        messageList.add(new SystemMessage(SYSTEM_INSTRUCTION));//מוסיפים את הודעת המשתמש
         messageList.addAll(chatMemory.get(conversationId));
-        UserMessage userMessage=new UserMessage(prompt);
+        UserMessage userMessage = new UserMessage(prompt);
         messageList.add(userMessage);
-        String aiResponse=chatClient.prompt().messages(messageList).call()
+        String aiResponse = chatClient.prompt().messages(messageList).call()
                 .content();
-        AssistantMessage aiMessage=new AssistantMessage(aiResponse);
-        List<Message>messageList1=List.of(userMessage,aiMessage);
-        chatMemory.add(conversationId,messageList1);
+        AssistantMessage aiMessage = new AssistantMessage(aiResponse);
+        List<Message> messageList1 = List.of(userMessage, aiMessage);
+        chatMemory.add(conversationId, messageList1);
         return aiResponse;
 
     }
 
 
+
+    //תשובה עם זכרון + STREAMING
     public Flux<String> streamResponse(String prompt, String conversationId) {
 
+        // בונים את הסטוריית הצאט + החוקים + ההודעה החדשה מהמשתמש
         List<Message> history = new ArrayList<>();
         history.add(new SystemMessage(SYSTEM_INSTRUCTION));
         history.addAll(chatMemory.get(conversationId));
-
         UserMessage userMessage = new UserMessage(prompt);
         history.add(userMessage);
 
+        //התשובה המליאה
         StringBuilder full = new StringBuilder();
 
         return chatClient
@@ -90,11 +97,11 @@ public class AIChatService {
                 .content()  // ← Flux<String>
                 .doOnNext(full::append)
                 .doOnComplete(() -> {
+                    //שמירת התשובה בזכרון
                     AssistantMessage aiMsg = new AssistantMessage(full.toString());
                     chatMemory.add(conversationId, List.of(userMessage, aiMsg));
                 });
     }
-
 
 
 }

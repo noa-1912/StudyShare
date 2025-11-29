@@ -20,21 +20,21 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class BookController {
-   BooksRepository booksRepository;
-    @Autowired
+    BooksRepository booksRepository;
+
+    @Autowired//מאפשר הזרקת תלויות
     public BookController(BooksRepository booksRepository) {
         this.booksRepository = booksRepository;
     }
 
     //מחזיר את כל הספרים
     @GetMapping("/getBooks")
-    public ResponseEntity<List<Books>> getBooks(){
-        try{
+    public ResponseEntity<List<Books>> getBooks() {
+        try {
             return new ResponseEntity<>(booksRepository.findAll(), HttpStatus.OK);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             //כאן השרת לא יקרוס
-            return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

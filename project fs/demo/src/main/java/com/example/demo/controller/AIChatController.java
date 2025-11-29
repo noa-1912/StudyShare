@@ -17,6 +17,17 @@ public class AIChatController {
         this.aiChatService = aiChatService;
     }
 
+
+    //מקבלת הודעה מהמשתמש ומחזירה תגובה מAI
+    @PostMapping(value = "/chat/stream", produces = "text/event-stream")
+    public Flux<String> streamChat(@RequestBody ChatRequest chatRequest) {
+        return aiChatService.streamResponse(
+                chatRequest.message(),
+                chatRequest.conversationId()
+        ).map(chunk -> "data:" + chunk + "\n\n");
+    }
+
+
 //    @GetMapping("/chat")
 //    public  String getResponse(@RequestBody ChatRequest chatRequest) {
 //
@@ -42,17 +53,6 @@ public class AIChatController {
 //                        Flux.just("data: " + chunk + "\n\n")   // SSE תקין + flush
 //                );
 //    }
-
-    @PostMapping(value = "/chat/stream", produces = "text/event-stream")
-    public Flux<String> streamChat(@RequestBody ChatRequest chatRequest) {
-        return aiChatService.streamResponse(
-                chatRequest.message(),
-                chatRequest.conversationId()
-        ).map(chunk -> "data:" + chunk + "\n\n");
-    }
-
-
-
 
 
 }
