@@ -40,6 +40,35 @@ public class SolutionsController {
         this.booksRepository = booksRepository;
     }
 
+
+    //מחזירה את כל הפתרונות
+    @GetMapping("/getSolution")
+    public ResponseEntity<List<SolutionsDTO>> getAllSolutions() throws IOException {
+        //שליפת כל הבקשות ממסד הנתונים
+        List<Solutions> solutions = solutionsRepository.findAll();
+
+
+        if (solutions.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        //המרה כל אוביקט לDTO
+        List<SolutionsDTO> dtos = solutions.stream()
+                .map(s -> {
+                    try {
+                        return solutionsMapper.solutionsDTO(s);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .toList();
+
+        return new ResponseEntity<>(dtos, HttpStatus.OK);
+    }
+
+
+
+
     //שליפת פתרון לפי מזהה ID
     @GetMapping("/getSolutions/{id}")
     public ResponseEntity<SolutionsDTO> get(@PathVariable long id) throws IOException {
@@ -131,7 +160,19 @@ public class SolutionsController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @DeleteMapping("/deleteSolution/{id}")
+    public ResponseEntity deleteSolutionById(@PathVariable Long id){
+        try{
+            if(solutionsRepository.existsById(id)){
+                solutionsRepository.deleteById(id);
+                return new ResponseEntity(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity(HttpStatus. NOT_FOUND);
+        }catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     //    @PostMapping("/uploadSolutions")
 //    public ResponseEntity<Solutions> uploadSolutionsWithImage(

@@ -133,6 +133,21 @@ public class SuggestionController {
         }
     }
 
+    //מחיקת בקשה
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @DeleteMapping("/deleteSuggestion/{id}")
+    public ResponseEntity deleteSuggestionById(@PathVariable Long id){
+        try{
+            if(suggestionRepository.existsById(id)){
+                suggestionRepository.deleteById(id);
+                return new ResponseEntity(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity(HttpStatus. NOT_FOUND);
+        }catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     // ============================
     //   getAllSuggestions
     // ============================
