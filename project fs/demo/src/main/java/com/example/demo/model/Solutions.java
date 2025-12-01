@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import org.apache.catalina.User;
 
@@ -24,6 +26,7 @@ public class Solutions extends Suggestion{
 
 
     @OneToMany(mappedBy = "solution")
+    @JsonIgnore
     private  List<Comments> comments;
 
     public List<Comments> getComments() {

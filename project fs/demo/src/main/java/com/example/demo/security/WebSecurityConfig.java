@@ -97,8 +97,8 @@ public class WebSecurityConfig {
                                         .requestMatchers("/api/suggesion/getSuggestion").permitAll()
                                         .requestMatchers("/api/suggesion/deleteSuggestion/**").permitAll()
                                         .requestMatchers("/api/solution/getSolution").permitAll() // ← לפתוח את הנתיב
-
-
+                                        .requestMatchers("/api/comments/uploadComment").permitAll()
+                                        .requestMatchers("/api/comments/getComments/**").permitAll()
 
                                         //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
 //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה

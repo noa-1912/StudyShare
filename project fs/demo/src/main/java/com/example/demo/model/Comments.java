@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -12,10 +14,16 @@ public class Comments {
     private String commentText;
     private LocalDate commentDate;
     private int ratingValue;
+
     @ManyToOne
+
     private Users user;
+
     @ManyToOne
+
     private Solutions solution;
+
+
 
     public int getId() {
         return id;

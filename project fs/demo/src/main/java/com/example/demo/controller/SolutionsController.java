@@ -2,10 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.SolutionsDTO;
 import com.example.demo.dto.SuggestionDTO;
-import com.example.demo.model.Books;
-import com.example.demo.model.Solutions;
-import com.example.demo.model.Suggestion;
-import com.example.demo.model.Users;
+import com.example.demo.model.*;
 import com.example.demo.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,14 +27,16 @@ public class SolutionsController {
     SolutionsRepository solutionsRepository;
     private final UsersRepository usersRepository;
     private final BooksRepository booksRepository;
+    CommentsRepository commentsRepository;
     private static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "\\images\\";
 
     @Autowired
-    public SolutionsController(SolutionsRepository solutionsRepository, SolutionsMapper solutionsMapper, UsersRepository usersRepository, BooksRepository booksRepository) {
+    public SolutionsController(SolutionsRepository solutionsRepository, SolutionsMapper solutionsMapper, UsersRepository usersRepository, BooksRepository booksRepository,CommentsRepository commentsRepository) {
         this.solutionsRepository = solutionsRepository;
         this.solutionsMapper = solutionsMapper;
         this.usersRepository = usersRepository;
         this.booksRepository = booksRepository;
+        this.commentsRepository=commentsRepository;
     }
 
 
@@ -56,7 +55,21 @@ public class SolutionsController {
         List<SolutionsDTO> dtos = solutions.stream()
                 .map(s -> {
                     try {
-                        return solutionsMapper.solutionsDTO(s);
+                        SolutionsDTO dto = solutionsMapper.solutionsDTO(s);
+
+                        // 🚀 חישוב ממוצע
+                        List<Comments> comments = commentsRepository.findAllBySolutionId(s.getId());
+                        double avg = comments.isEmpty()
+                                ? 0
+                                : comments.stream()
+                                .mapToDouble(Comments::getRatingValue)
+                                .average()
+                                .orElse(0);
+
+                        dto.setAvg(avg);
+
+                        return dto;
+
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -73,10 +86,20 @@ public class SolutionsController {
     @GetMapping("/getSolutions/{id}")
     public ResponseEntity<SolutionsDTO> get(@PathVariable long id) throws IOException {
         Solutions s = (Solutions) solutionsRepository.findById(id).get();//שליםת הפתרון מהDB
-        if (s != null)
-            return new ResponseEntity<>(solutionsMapper.solutionsDTO(s), HttpStatus.OK);//מחזירים פתרון אחרי המחרה לDTO
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
+        if (s == null)
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);        SolutionsDTO dto = solutionsMapper.solutionsDTO(s);
+
+        // 🚀 חישוב ממוצע
+        List<Comments> comments = commentsRepository.findAllBySolutionId(s.getId());
+        double avg = comments.isEmpty()
+                ? 0
+                : comments.stream()
+                .mapToDouble(Comments::getRatingValue)
+                .average()
+                .orElse(0);
+
+        dto.setAvg(avg);
+        return new ResponseEntity<>(dto, HttpStatus.OK);    }
 
     //חיפוש פתרון לפי ספר עמוד ותרגיל
     @GetMapping("/searchSolutions/{bookId}/{page}/{exercise}")
@@ -100,8 +123,21 @@ public class SolutionsController {
         List<SolutionsDTO> dtos = solutions.stream()//המרת רשימת הפתרונות לDTO
                 .map(s -> {
                     try {
-                        return solutionsMapper.solutionsDTO(s);
-                    } catch (IOException e) {
+                        SolutionsDTO dto = solutionsMapper.solutionsDTO(s);
+
+                        // 🚀 חישוב ממוצע
+                        List<Comments> comments = commentsRepository.findAllBySolutionId(s.getId());
+                        double avg = comments.isEmpty()
+                                ? 0
+                                : comments.stream()
+                                .mapToDouble(Comments::getRatingValue)
+                                .average()
+                                .orElse(0);
+
+                        dto.setAvg(avg);
+
+                        return dto;                    }
+                     catch (IOException e) {
                         throw new RuntimeException(e);
                     }
                 })
