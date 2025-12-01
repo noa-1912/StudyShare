@@ -23,6 +23,7 @@ import java.util.List;
 @CrossOrigin
 public class SolutionsController {
 
+    EmailService emailService;
     SolutionsMapper solutionsMapper;
     SolutionsRepository solutionsRepository;
     private final UsersRepository usersRepository;
@@ -31,12 +32,13 @@ public class SolutionsController {
     private static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "\\images\\";
 
     @Autowired
-    public SolutionsController(SolutionsRepository solutionsRepository, SolutionsMapper solutionsMapper, UsersRepository usersRepository, BooksRepository booksRepository,CommentsRepository commentsRepository) {
+    public SolutionsController(SolutionsRepository solutionsRepository, SolutionsMapper solutionsMapper, UsersRepository usersRepository, BooksRepository booksRepository,CommentsRepository commentsRepository, EmailService emailService) {
         this.solutionsRepository = solutionsRepository;
         this.solutionsMapper = solutionsMapper;
         this.usersRepository = usersRepository;
         this.booksRepository = booksRepository;
         this.commentsRepository=commentsRepository;
+        this.emailService=emailService;
     }
 
 
@@ -196,6 +198,61 @@ public class SolutionsController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+
+
+
+
+    //העלאת פתרון חדש עם תמונה
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @PostMapping(value = "/uploadSolutionsWithEmail", consumes = "multipart/form-data")
+    public ResponseEntity<SolutionsDTO> uploadSolutionsWithImageWithEmail(
+            @RequestPart(value = "image", required = false) MultipartFile file,
+            @RequestPart("solution") Solutions s,
+            @RequestParam("email") String email) {
+
+
+
+        //טעינת המשתמש המעלה את הפתרון
+        Users user = usersRepository.findById(s.getUser().getId())
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        s.setUser(user);
+
+        //טעינת הספר מDB
+        Books book = booksRepository.findById(s.getBook().getId())
+                .orElseThrow(() -> new RuntimeException("Book not found"));
+        s.setBook(book);
+
+        try {
+            ImageUtils.uploadImage(file);//שמירת התמונה בתיקייה
+            s.setImagePath(file.getOriginalFilename());//במסד שומרים רק את שם הקובץ
+
+            Solutions solutions = solutionsRepository.save(s);//שמירת הפתרון במסד
+            SolutionsDTO dto = solutionsMapper.solutionsDTO(solutions);//ממיר פתרון לDTO
+
+            // ====================  ✉ שליחת מייל אוטומטית ✉ ======================
+            String ownerEmail =email ; // מעלה הבקשה
+            String solverName = user.getName(); // פותר השאלה
+
+            emailService.sendEmail(
+                    ownerEmail,
+                    "📌 קיבלת פתרון חדש לבקשה שלך!",
+                    "שלום! \nמשתמש בשם " + solverName + " העלה פתרון לבקשה שלך באתר 🧩\n" +
+                            "כנס עכשיו לצפות בפתרון 👉 StudyShare"
+            );
+
+
+            //אנגולר מקבל JSON עם הפתרון + תמונה בקידוד
+            return new ResponseEntity<>(dto, HttpStatus.CREATED);
+
+        } catch (IOException e) {
+            System.out.println(e);
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
+
     @PreAuthorize("hasRole('ROLE_USER')")
     @DeleteMapping("/deleteSolution/{id}")
     public ResponseEntity deleteSolutionById(@PathVariable Long id){
