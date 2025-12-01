@@ -15,19 +15,18 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+//שליפת משתמש עם תפקידו והמרה להרשאות מה מותר לו
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
+
     @Autowired
     UsersRepository usersRepository;
-
-
-
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //לאמת את המשתמש עם המשתמש שנמצא ב-DB
-        Users user=usersRepository.findByEmail(username);//למה לא EMAIL??
-        if (user==null)
+        Users user=usersRepository.findByEmail(username);//שליפת המשתמש מהמסד
+        if (user==null)//אם המשתמש לא קיים זריקת חריגה
             throw new UsernameNotFoundException("user not found");
         //רשימה של הרשאות
         List<GrantedAuthority> grantedAuthorities=new ArrayList<>();

@@ -19,7 +19,7 @@ import java.util.jar.JarOutputStream;
 
 
 //********תפקיד המחלקה:
-//
+//מטרתה להחזיר 401 כאשר אין JWT תקין או משתמש לא מחובר
 @Component
 public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 

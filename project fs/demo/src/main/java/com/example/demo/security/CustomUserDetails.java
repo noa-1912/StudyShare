@@ -8,6 +8,7 @@ import java.util.Collection;
 
 public class CustomUserDetails extends User {
 
+    //לפי התפקיד אומר איזה הרשאות מותר לאותו משתמש
     public CustomUserDetails(String email, String password, Collection<? extends GrantedAuthority> authorities) {
         super(email, password, authorities);
     }

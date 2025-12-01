@@ -17,7 +17,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 
 //********תפקיד המחלקה:
-//
+//פילטר שרץ לפני כל בקשה לשרת
 
 public class AuthTokenFilter extends OncePerRequestFilter {
 
@@ -31,18 +31,26 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     //מה הפונקציה מקבלת?
     //
     @Override
+    //בודקת אם הבקשה מגיעה ממשתמש מחובר
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         try{
+            //מחפש קוקי בשם אם נמצא מחזיר JWT אם לא מחזיר NULL
             String jwt=jwtUtils.getJwtFromCookies(httpServletRequest);
             //*********מהי השאלה כאן???
+            //בדיקה אם הטוקן תקף ולא שבור או מזוייף
             if(jwt !=null && jwtUtils.validateJwtToken(jwt)){
+                //שליפת אימייל מתוך JWT
                 String userName=jwtUtils.getUserNameFromJwtToken(jwt);
+                //טעינת משתמש מהDBבעזרת המייל ומצאים את תפקידיו וכך יודעים מה מותר לו
                 UserDetails userDetails= userDetailsService.loadUserByUsername(userName);
 
+
+                //יצירת אוביקט שמייצג משתמש מחובר ובתוכו פרטי משתמש ללא סיסמה וכל ההרשאות שלו
                 UsernamePasswordAuthenticationToken authentication=
                         new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
 
+                //החזרת המשתמש למערכת האבטחה
                 SecurityContextHolder.getContext().setAuthentication(authentication);
 
             }
@@ -53,6 +61,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
             System.out.println(e);
         }
         //***************מה משמעות ה-filter??
+        //מעביר את הבקשה לפילטר הבא בשרשרת עד שמגיעים לקונטרולר
         filterChain.doFilter(httpServletRequest,httpServletResponse);
     }
 

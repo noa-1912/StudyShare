@@ -40,7 +40,6 @@ public class UsersDTO {
     }
 
 
-
     public LocalDate getDate() {
         return date;
     }
@@ -48,15 +47,19 @@ public class UsersDTO {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
     public String getImagePath() {
         return imagePath;
     }
+
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
+
     public String getImage() {
         return image;
     }
+
     public void setImage(String image) {
         this.image = image;
 

@@ -31,21 +31,22 @@ import java.util.List;
 @EnableWebSecurity
 public class WebSecurityConfig {
     @Qualifier("customUserDetailsService")
-    CustomUserDetailsService userDetailsService;
+    CustomUserDetailsService userDetailsService;//יודע לטעון משתמשים לפי אימייל מהDB
     @Autowired
-    private AuthEntryPointJwt unauthorizedHandler;
+    private AuthEntryPointJwt unauthorizedHandler;//אם משתמש לא מחובר מחזיר 401
 
 
     public WebSecurityConfig(CustomUserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 
-    @Bean
+    @Bean//מוודא JWT לפני כל בקשה
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
     }
 
     //********תפקיד הפונקציה:
+    //טוען משתמשים ומשווה סיסמאות
     //מה הפונקציה מחזירה?
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
@@ -62,6 +63,7 @@ public class WebSecurityConfig {
         return authConfig.getAuthenticationManager();
     }
 
+    //מצפין סיסמאות לפני שנשמר בDB
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -84,32 +86,31 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                                 auth.requestMatchers("/h2-console/**").permitAll()
-                                        .requestMatchers("/api/user/signin").permitAll()
-                                        .requestMatchers("/api/user/signup").permitAll()
+                                        .requestMatchers("/api/user/signin").permitAll()//התחברות פתוח
+                                        .requestMatchers("/api/user/signup").permitAll()//הרשמה פתוח
                                         .requestMatchers("/api/user/**").permitAll()
-                                         .requestMatchers("/api/book/**").permitAll()
+                                        .requestMatchers("/api/book/**").permitAll()
                                         .requestMatchers("/api/ai/chat/**").permitAll()
 
+                                        .requestMatchers("/api/solution/searchSolutions/**").permitAll()
                                         .requestMatchers("/api/solution/getSolutions").permitAll()
                                         .requestMatchers("/api/solution/image").permitAll()
                                         .requestMatchers("/api/suggesion/image").permitAll()
                                         .requestMatchers("/api/suggesion/getSuggestion/**").permitAll()
                                         .requestMatchers("/api/suggesion/getSuggestion").permitAll()
                                         .requestMatchers("/api/suggesion/deleteSuggestion/**").permitAll()
-                                        .requestMatchers("/api/solution/getSolution").permitAll() // ← לפתוח את הנתיב
+                                        .requestMatchers("/api/solution/getSolution").permitAll()
                                         .requestMatchers("/api/comments/uploadComment").permitAll()
                                         .requestMatchers("/api/comments/getComments/**").permitAll()
 
                                         //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
-//כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
                                         .requestMatchers("/error").permitAll()
 //                                        //כל שאר הפונקציות ישארו חסומות אך ורק למשתמשים שנכנסו
 //                                        //אם רוצים אפשר לאפשר פונקציות מסוימות או קונטרולים מסוימים לכל המשתמשים
-//                                        //לדוג'
-
                                         .anyRequest().authenticated()
                 );
 
+        //אם אין JWT מחזיר שגיאה401
         http.exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler));
 
         // fix H2 database console: Refused to display ' in a frame because it set 'X-Frame-Options' to 'deny'
@@ -119,6 +120,7 @@ public class WebSecurityConfig {
 
 
         //***********משמעות הגדרה זו:
+        //בדיקת JWT לפני נסיונות התחבברות והרשאות
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

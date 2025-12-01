@@ -11,16 +11,17 @@ import java.io.IOException;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
-public interface SolutionsMapper{
-    UsersMapper INSTANCE= Mappers.getMapper(UsersMapper.class);
+public interface SolutionsMapper {
+    UsersMapper INSTANCE = Mappers.getMapper(UsersMapper.class);
 
     List<SolutionsDTO> mapSolutionsDTOList(List<Solutions> list);
+
     Solutions solutionsDTOtoSolutionsn(SolutionsDTO solutions);
 
 
-    default SolutionsDTO solutionsDTO(Solutions s)throws IOException {
-        SolutionsDTO solutionsDTO=new SolutionsDTO();
-       solutionsDTO.setUserDTO(INSTANCE.usersToUsersDTO(s.getUser()));
+    default SolutionsDTO solutionsDTO(Solutions s) throws IOException {
+        SolutionsDTO solutionsDTO = new SolutionsDTO();
+        solutionsDTO.setUserDTO(INSTANCE.usersToUsersDTO(s.getUser()));
         solutionsDTO.setId(s.getId());
         solutionsDTO.setContent(s.getContent());
         solutionsDTO.setExercise(s.getExercise());
