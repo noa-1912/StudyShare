@@ -34,7 +34,7 @@ public class AIChatService {
             8. לעודד חשיבה עצמאית: לתת קודם רמז, ואז פתרון חלקי במידת הצורך.
             
             יכולות עיקריות:
-            - להסביר נושאים במתמטיקה (אלגברה, גיאומטריה, טריגונומטריה, סדרות, פונקציות, חדו"א).
+            - להסביר נושאים במתמטיקה (אלגברה, גיאומטריה, טריגונומטריה, סדרות, פונקציות, חדו"א ועוד).
             - ליצור שאלות תרגול ולבדוק תשובות.
             - להסביר אנגלית ברמה תיכונית: אוצר מילים, דקדוק, כתיבה, הבנת הנקרא.
             - לתת הסברים מסודרים: הגדרה → רעיון → דוגמה → תרגול קצר.
@@ -48,36 +48,7 @@ public class AIChatService {
         this.chatMemory = chatMemory;
     }
 
-    //תשובה רגילה בלי זכרון ללא STREAMING
-    public String getResponse(String prompt) {
-        SystemMessage systemMessage = new SystemMessage(SYSTEM_INSTRUCTION);//מוסיפים את חוקי הצאט
-        UserMessage userMessage = new UserMessage(prompt);//מוסיפים את הודעת המשתמש
-
-        List<Message> messageList = List.of(systemMessage, userMessage);//שולחים הכל לAI
-
-        return chatClient.prompt().messages(messageList).call().content();//מחזירים רגיל את התשובה
-
-    }
-
-    //תשובה רגילה + זכרון שיחה
-    public String getResponse2(String prompt, String conversationId) {
-        List<Message> messageList = new ArrayList<>();
-        messageList.add(new SystemMessage(SYSTEM_INSTRUCTION));//מוסיפים את הודעת המשתמש
-        messageList.addAll(chatMemory.get(conversationId));
-        UserMessage userMessage = new UserMessage(prompt);
-        messageList.add(userMessage);
-        String aiResponse = chatClient.prompt().messages(messageList).call()
-                .content();
-        AssistantMessage aiMessage = new AssistantMessage(aiResponse);
-        List<Message> messageList1 = List.of(userMessage, aiMessage);
-        chatMemory.add(conversationId, messageList1);
-        return aiResponse;
-
-    }
-
-
-
-    //תשובה עם זכרון + STREAMING
+ //תשובה עם זכרון + STREAMING
     public Flux<String> streamResponse(String prompt, String conversationId) {
 
         // בונים את הסטוריית הצאט + החוקים + ההודעה החדשה מהמשתמש
@@ -103,5 +74,21 @@ public class AIChatService {
                 });
     }
 
+
+    //תשובה רגילה + זכרון שיחה
+    public String getResponse2(String prompt, String conversationId) {
+        List<Message> messageList = new ArrayList<>();
+        messageList.add(new SystemMessage(SYSTEM_INSTRUCTION));//מוסיפים את הודעת המשתמש
+        messageList.addAll(chatMemory.get(conversationId));
+        UserMessage userMessage = new UserMessage(prompt);
+        messageList.add(userMessage);
+        String aiResponse = chatClient.prompt().messages(messageList).call()
+                .content();
+        AssistantMessage aiMessage = new AssistantMessage(aiResponse);
+        List<Message> messageList1 = List.of(userMessage, aiMessage);
+        chatMemory.add(conversationId, messageList1);
+        return aiResponse;
+
+    }
 
 }

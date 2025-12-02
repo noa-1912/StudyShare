@@ -17,7 +17,7 @@ public class EmailService {
         message.setTo(toEmail);              // למי שולחים
         message.setSubject(subject);         // נושא המייל
         message.setText(body);               // תוכן המייל
-        message.setFrom("YOUR_EMAIL@gmail.com"); // המייל השולח
+        message.setFrom("studysharegit@gmail.com"); // המייל השולח
 
         mailSender.send(message);            // שליחה בפועל
         System.out.println("📨 Mail sent to: " + toEmail);

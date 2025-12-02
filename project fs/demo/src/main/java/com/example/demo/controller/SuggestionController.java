@@ -45,7 +45,7 @@ public class SuggestionController {
         this.booksRepository = booksRepository;
     }
 
-    //מחזירה פתרון לפי מזהה ID
+    //מחזירה בקשה לפי מזהה ID
     @GetMapping("/getSuggestion/{id}")
     @Transactional
     public ResponseEntity<SuggestionDTO> get(@PathVariable long id) throws IOException {
@@ -117,21 +117,21 @@ public class SuggestionController {
     }
 
     //  מחזיר תמונה לפי השם
-    @GetMapping("/image/{filename:.+}")
-    public ResponseEntity<byte[]> getImage(@PathVariable String filename) {
-        try {
-            Path imagePath = Paths.get("C:\\Users\\Yael\\Desktop\\StudyShare\\images\\" + filename);
-            byte[] imageBytes = Files.readAllBytes(imagePath);
-
-            return ResponseEntity.ok()
-                    .header("Content-Type", Files.probeContentType(imagePath))
-                    .body(imageBytes);
-
-        } catch (IOException e) {
-            System.out.println("❌ שגיאה בקריאת תמונה: " + e.getMessage());
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-    }
+//    @GetMapping("/image/{filename:.+}")
+//    public ResponseEntity<byte[]> getImage(@PathVariable String filename) {
+//        try {
+//            Path imagePath = Paths.get("C:\\Users\\Yael\\Desktop\\StudyShare\\images\\" + filename);
+//            byte[] imageBytes = Files.readAllBytes(imagePath);
+//
+//            return ResponseEntity.ok()
+//                    .header("Content-Type", Files.probeContentType(imagePath))
+//                    .body(imageBytes);
+//
+//        } catch (IOException e) {
+//            System.out.println("❌ שגיאה בקריאת תמונה: " + e.getMessage());
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//        }
+//    }
 
     //מחיקת בקשה
     @PreAuthorize("hasRole('ROLE_USER')")
@@ -148,33 +148,5 @@ public class SuggestionController {
         }
     }
 
-    // ============================
-    //   getAllSuggestions
-    // ============================
-//    @GetMapping("/getSuggestionByUser")
-//    public ResponseEntity<List<SuggestionDTO>> getAllSuggestionsByUserId() throws IOException {
-//
-//        List<Suggestion> suggestions = suggestionRepository.findAllByUserId();
-//
-//        // ❗ מסנן Solutions
-//        List<Suggestion> onlySuggestions = suggestions.stream()
-//                .filter(s -> !(s instanceof com.example.demo.model.Solutions))
-//                .toList();
-//
-//        if (onlySuggestions.isEmpty()) {
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        }
-//
-//        List<SuggestionDTO> dtos = onlySuggestions.stream()
-//                .map(s -> {
-//                    try {
-//                        return suggesionMapper.suggestionDto(s);
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-//                })
-//                .toList();
-//
-//        return new ResponseEntity<>(dtos, HttpStatus.OK);
-//    }
+
 }

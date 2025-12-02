@@ -133,7 +133,7 @@ public class Users {
         this.password = password;
         this.date = date;
         this.solutions = solutions;
-        this.suggestion = suggestion;
+        this.suggestion = suggestions;
         this.comments = comments;
         this.imagePath = imagePath;
     }

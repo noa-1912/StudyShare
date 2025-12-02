@@ -23,7 +23,6 @@ public interface SuggesionMapper {
     default SuggestionDTO suggestionDto(Suggestion s) throws IOException {
 
         SuggestionDTO suggestionDTO = new SuggestionDTO();//יוצרים DTO חדש
-
         suggestionDTO.setUserDTO(INSTANCE.usersToUsersDTO(s.getUser()));
         suggestionDTO.setBook(s.getBook());
         suggestionDTO.setId(s.getId());

@@ -59,7 +59,7 @@ public class SolutionsController {
                     try {
                         SolutionsDTO dto = solutionsMapper.solutionsDTO(s);
 
-                        // 🚀 חישוב ממוצע
+                        //  חישוב ממוצע
                         List<Comments> comments = commentsRepository.findAllBySolutionId(s.getId());
                         double avg = comments.isEmpty()
                                 ? 0
@@ -91,7 +91,7 @@ public class SolutionsController {
         if (s == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);        SolutionsDTO dto = solutionsMapper.solutionsDTO(s);
 
-        // 🚀 חישוב ממוצע
+        //  חישוב ממוצע
         List<Comments> comments = commentsRepository.findAllBySolutionId(s.getId());
         double avg = comments.isEmpty()
                 ? 0
@@ -127,7 +127,7 @@ public class SolutionsController {
                     try {
                         SolutionsDTO dto = solutionsMapper.solutionsDTO(s);
 
-                        // 🚀 חישוב ממוצע
+                        //  חישוב ממוצע
                         List<Comments> comments = commentsRepository.findAllBySolutionId(s.getId());
                         double avg = comments.isEmpty()
                                 ? 0
@@ -149,22 +149,22 @@ public class SolutionsController {
     }
 
     //החזרת תמונת הפתרון
-    @GetMapping("/image/{filename:.+}")
-    public ResponseEntity<byte[]> getImage(@PathVariable String filename) {
-        try {
-            Path imagePath = Paths.get("C:\\Users\\Yael\\Desktop\\StudyShare\\images\\" + filename);
-            byte[] imageBytes = Files.readAllBytes(imagePath);//קריאת התמונה בביטים
-
-            return ResponseEntity.ok()//מחזירה תמונה לדפדפן
-                    .header("Content-Type", Files.probeContentType(imagePath))
-                    .body(imageBytes);
-
-        } catch (IOException e) {
-            System.out.println("❌ שגיאה בקריאת תמונה: " + e.getMessage());
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-    }
-
+//    @GetMapping("/image/{filename:.+}")
+//    public ResponseEntity<byte[]> getImage(@PathVariable String filename) {
+//        try {
+//            Path imagePath = Paths.get("C:\\Users\\Yael\\Desktop\\StudyShare\\images\\" + filename);
+//            byte[] imageBytes = Files.readAllBytes(imagePath);//קריאת התמונה בביטים
+//
+//            return ResponseEntity.ok()//מחזירה תמונה לדפדפן
+//                    .header("Content-Type", Files.probeContentType(imagePath))
+//                    .body(imageBytes);
+//
+//        } catch (IOException e) {
+//            System.out.println("❌ שגיאה בקריאת תמונה: " + e.getMessage());
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//        }
+//    }
+//
 
     //העלאת פתרון חדש עם תמונה
     @PreAuthorize("hasRole('ROLE_USER')")
@@ -252,7 +252,7 @@ public class SolutionsController {
     }
 
 
-
+//מחיקה ניתנת רק למשתמש שהעלה את הפתרון
     @PreAuthorize("hasRole('ROLE_USER')")
     @DeleteMapping("/deleteSolution/{id}")
     public ResponseEntity deleteSolutionById(@PathVariable Long id){

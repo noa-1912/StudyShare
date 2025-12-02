@@ -46,7 +46,7 @@ public class CommentsController {
 
 
     //העלאת תגובה חדשה
-   // @PreAuthorize("hasRole('ROLE_USER')")
+   @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping("/uploadComment")
     public ResponseEntity<?> add(@RequestBody Comments c) {
 

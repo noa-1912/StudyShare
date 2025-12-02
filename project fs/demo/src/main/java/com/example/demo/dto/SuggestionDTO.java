@@ -10,7 +10,10 @@ import java.time.LocalDate;
 
 public class SuggestionDTO {
 
+    // מונע מ-Jackson להכניס לשדה book פרוקסי פנימיים של Hibernate (hibernateLazyInitializer, handler)
+// זה חשוב כשיש טעינה עצלה (LAZY) כדי למנוע שדות מוזרים או שגיאת סריאליזציה ב-JSON
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+
     private Books book;
     private Long id;
     private int page;

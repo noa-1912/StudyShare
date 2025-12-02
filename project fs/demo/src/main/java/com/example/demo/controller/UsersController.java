@@ -50,7 +50,7 @@ public class UsersController {
     //הרשמות
     @PostMapping("/signup")
     public ResponseEntity<?> signUp(
-            @Valid @RequestPart("user") Users user,// @Valid = עושה בדיקת ולידציה אוטומטית
+            @RequestPart("user") Users user,// @Valid = עושה בדיקת ולידציה אוטומטית
             BindingResult result, //יכיל אם יש שגיאות
             @RequestPart("image") MultipartFile file) throws IOException {
 
@@ -89,8 +89,6 @@ public class UsersController {
     public ResponseEntity<?> signin(@RequestBody Users u) {
 
         try {
-
-
             Authentication authentication = authenticationManager // מנסה לבצע אימות לפי אימייל + סיסמה
                     .authenticate(new UsernamePasswordAuthenticationToken(u.getEmail(), u.getPassword()));
 

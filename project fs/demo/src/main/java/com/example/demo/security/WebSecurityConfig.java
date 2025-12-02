@@ -91,6 +91,7 @@ public class WebSecurityConfig {
                                         .requestMatchers("/api/user/**").permitAll()
                                         .requestMatchers("/api/book/**").permitAll()
                                         .requestMatchers("/api/ai/chat/**").permitAll()
+                                        .requestMatchers("/api/solution/getSolutions/**").permitAll()
 
                                         .requestMatchers("/api/solution/searchSolutions/**").permitAll()
                                         .requestMatchers("/api/solution/getSolutions").permitAll()
@@ -100,9 +101,8 @@ public class WebSecurityConfig {
                                         .requestMatchers("/api/suggesion/getSuggestion").permitAll()
                                         .requestMatchers("/api/suggesion/deleteSuggestion/**").permitAll()
                                         .requestMatchers("/api/solution/getSolution").permitAll()
-                                        .requestMatchers("/api/comments/uploadComment").permitAll()
-                                        .requestMatchers("/api/comments/getComments/**").permitAll()
-
+                                       .requestMatchers("/api/comments/getComments/**").permitAll()
+                                        .requestMatchers("/api/solution/getSolutions/").permitAll()
                                         //כאן נעשה אפשור לפונקציות של הכניסה, הרשמה
                                         .requestMatchers("/error").permitAll()
 //                                        //כל שאר הפונקציות ישארו חסומות אך ורק למשתמשים שנכנסו

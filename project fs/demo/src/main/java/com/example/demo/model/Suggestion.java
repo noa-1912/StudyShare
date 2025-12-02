@@ -27,9 +27,6 @@ public class Suggestion {
     @JoinColumn(name = "book_id")
     private Books book;
 
-
-
-
     public Suggestion() {
     }
 
