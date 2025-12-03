@@ -18,7 +18,6 @@ import java.io.IOException;
 
 //********תפקיד המחלקה:
 //פילטר שרץ לפני כל בקשה לשרת
-
 public class AuthTokenFilter extends OncePerRequestFilter {
 
     @Autowired

@@ -52,7 +52,7 @@ public class WebSecurityConfig {
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 
-        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setUserDetailsService(userDetailsService);//פנייה לעוזר
         authProvider.setPasswordEncoder(passwordEncoder());
 
         return authProvider;

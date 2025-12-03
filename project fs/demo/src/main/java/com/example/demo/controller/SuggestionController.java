@@ -116,22 +116,6 @@ public class SuggestionController {
         }
     }
 
-    //  מחזיר תמונה לפי השם
-//    @GetMapping("/image/{filename:.+}")
-//    public ResponseEntity<byte[]> getImage(@PathVariable String filename) {
-//        try {
-//            Path imagePath = Paths.get("C:\\Users\\Yael\\Desktop\\StudyShare\\images\\" + filename);
-//            byte[] imageBytes = Files.readAllBytes(imagePath);
-//
-//            return ResponseEntity.ok()
-//                    .header("Content-Type", Files.probeContentType(imagePath))
-//                    .body(imageBytes);
-//
-//        } catch (IOException e) {
-//            System.out.println("❌ שגיאה בקריאת תמונה: " + e.getMessage());
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-//        }
-//    }
 
     //מחיקת בקשה
     @PreAuthorize("hasRole('ROLE_USER')")

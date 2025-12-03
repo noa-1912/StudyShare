@@ -114,9 +114,7 @@ public class SolutionsController {
         List<Solutions> solutions =
                 solutionsRepository//שליפת הפתרון המבוקש - אם קיים
                         .findSolutionsByBook_IdAndPageAndExercise(bookId, page, exercise);
-//        if (solutions.isEmpty()) {
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        }
+
         if (solutions.isEmpty()) {//אם לא נמצא פתרון מחזירם רשימה ריקה
             return new ResponseEntity<>(List.of(), HttpStatus.OK);
         }
@@ -148,23 +146,6 @@ public class SolutionsController {
         return new ResponseEntity<>(dtos, HttpStatus.OK);
     }
 
-    //החזרת תמונת הפתרון
-//    @GetMapping("/image/{filename:.+}")
-//    public ResponseEntity<byte[]> getImage(@PathVariable String filename) {
-//        try {
-//            Path imagePath = Paths.get("C:\\Users\\Yael\\Desktop\\StudyShare\\images\\" + filename);
-//            byte[] imageBytes = Files.readAllBytes(imagePath);//קריאת התמונה בביטים
-//
-//            return ResponseEntity.ok()//מחזירה תמונה לדפדפן
-//                    .header("Content-Type", Files.probeContentType(imagePath))
-//                    .body(imageBytes);
-//
-//        } catch (IOException e) {
-//            System.out.println("❌ שגיאה בקריאת תמונה: " + e.getMessage());
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-//        }
-//    }
-//
 
     //העלאת פתרון חדש עם תמונה
     @PreAuthorize("hasRole('ROLE_USER')")
@@ -210,8 +191,6 @@ public class SolutionsController {
             @RequestPart(value = "image", required = false) MultipartFile file,
             @RequestPart("solution") Solutions s,
             @RequestParam("email") String email) {
-
-
 
         //טעינת המשתמש המעלה את הפתרון
         Users user = usersRepository.findById(s.getUser().getId())
@@ -267,21 +246,6 @@ public class SolutionsController {
         }
     }
 
-    //    @PostMapping("/uploadSolutions")
-//    public ResponseEntity<Solutions> uploadSolutionsWithImage(
-//            @RequestPart("image") MultipartFile file,
-//            @RequestPart("suggestion") Solutions s) {
-//        try {
-//            ImageUtils.uploadImage(file);
-//            s.setImagePath(file.getOriginalFilename());
-//            Solutions solutions = solutionsRepository.save(s);
-//            return new ResponseEntity<>(solutions, HttpStatus.CREATED);
-//        } catch (IOException e) {
-//            System.out.println(e);
-//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//
-//
-//    }
+
 
 }
